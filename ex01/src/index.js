@@ -3,6 +3,8 @@ import ReactDOM from "react-dom";
 import reportWebVitals from "./reportWebVitals";
 import MyApp from "./App.js"
 
+import './style.css';
+
 // JSX
 ReactDOM.render(
     <MyApp />,

@@ -1,16 +1,15 @@
 import React from "react";
-import Header from "./Header";
-import MainMenu from "./MainMenu";
-import Footer from "./Footer";
+import TodoItem from "./TodoItem";
+import todosData from "./todosData";
 
 function App() {
+    const todosComponent = todosData.map(item => <TodoItem key={item.id} item={item}/>);
+
     return (
-        <div>
-          <Header/>
-          <MainMenu/>
-          <Footer/>
+        <div className="todo-list">
+            {todosComponent}
         </div>
     );
 }
 
-export default App
+export default App;
