@@ -2,8 +2,6 @@
 import * as THREE from "three";
 import React, { useRef, useState } from "react";
 
-import { Link } from "react-router-dom"
-
 import { Canvas, useFrame } from "react-three-fiber";
 import {
     softShadows,
@@ -11,7 +9,6 @@ import {
     MeshWobbleMaterial,
     Html
 } from "@react-three/drei";
-
 
 
 softShadows();
