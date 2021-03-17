@@ -1,0 +1,39 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+.footer {
+    position: absolute;
+    top: 90%;
+    left: 100%;
+    transform: translate(-200%, -50%);
+    height: 20vh;
+    .contact {
+        justify-content: space-between;
+        div {
+            margin-bottom: 2vh;
+            .icon:hover {
+                color: red;
+            }
+        }
+    }
+}
+
+Canvas {
+    color: white;
+    width: 100vw;
+    height: 100vh;
+}
+.home {
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    span {
+        color: yellowgreen;
+        font-size: 20vw;
+    }
+}
