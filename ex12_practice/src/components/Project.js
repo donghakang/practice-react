@@ -1,7 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
 export default function Project() {
-    <>
-        Project
-    </>
-} 
+  return <div>Project</div>;
+}

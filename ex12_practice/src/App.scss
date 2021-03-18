@@ -5,35 +5,39 @@
 }
 
 
+.App {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+
 .footer {
     position: absolute;
     top: 90%;
     left: 100%;
-    transform: translate(-200%, -50%);
+    transform: translate(-200%, -80%);
     height: 20vh;
     .contact {
         justify-content: space-between;
         div {
             margin-bottom: 2vh;
-            .icon:hover {
-                color: red;
-            }
         }
     }
 }
 
-Canvas {
-    color: white;
-    width: 100vw;
-    height: 100vh;
-}
+
+
+
 .home {
     position: absolute;
     top:50%;
     left:50%;
     transform: translate(-50%, -50%);
     span {
+        width: 100vw;
         color: yellowgreen;
-        font-size: 20vw;
+        font-size: 10vw;
     }
 }

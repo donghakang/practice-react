@@ -12,7 +12,7 @@ import {
   softShadows,
   Html
 } from "@react-three/drei";
-
+import { Link } from "react-router-dom";
 
 // VARIABLES
 let PhoneClicked = false;
@@ -159,12 +159,12 @@ function Statue(props) {
               StatueClicked = !StatueClicked
               MacClicked = false;
               PhoneClicked = false;
-
+              
               
               window.appHistory.push("/about")
-              }} 
-              onPointerOver={(event) => setHover(true)}
-               onPointerOut={(event) => setHover(false)}>
+            }} 
+            onPointerOver={(event) => setHover(true)}
+            onPointerOut={(event) => setHover(false)}>
 
             <mesh position={[10, 6.5, 5]} rotation={[0, 0, -Math.PI / 8]} scale={[20, 10, 10]}>
               <boxBufferGeometry position={[0, 0, 0]} />
@@ -174,88 +174,88 @@ function Statue(props) {
           <mesh castShadow material={materials.material_0} geometry={nodes.mesh_0.geometry}>
             <meshStandardMaterial
               attach="material"
-              color={new THREE.Color("#bbbbbb")}
-              roughness={0.7}
+              color={new THREE.Color("#333333")}
+              roughness={0.3}
               metalness={1.0}
             />
           </mesh>
           <mesh castShadow material={materials.material_0} geometry={nodes.mesh_1.geometry} >
             <meshStandardMaterial
               attach="material"
-              color={new THREE.Color("#bbbbbb")}
-              roughness={0.7}
+              color={new THREE.Color("#333333")}
+              roughness={0.3}
               metalness={1.0}
             />
           </mesh>
           <mesh castShadow material={materials.material_0} geometry={nodes.mesh_2.geometry} >
             <meshStandardMaterial
               attach="material"
-              color={new THREE.Color("#bbbbbb")}
-              roughness={0.7}
+              color={new THREE.Color("#333333")}
+              roughness={0.3}
               metalness={1.0}
             />
           </mesh>
           <mesh castShadow material={materials.material_0} geometry={nodes.mesh_3.geometry} >
             <meshStandardMaterial
               attach="material"
-              color={new THREE.Color("#bbbbbb")}
-              roughness={0.7}
+              color={new THREE.Color("#333333")}
+              roughness={0.3}
               metalness={1.0}
             />
           </mesh>
           <mesh castShadow material={materials.material_0} geometry={nodes.mesh_4.geometry} >
             <meshStandardMaterial
               attach="material"
-              color={new THREE.Color("#bbbbbb")}
-              roughness={0.7}
+              color={new THREE.Color("#333333")}
+              roughness={0.3}
               metalness={1.0}
             />
           </mesh>
           <mesh castShadow material={materials.material_0} geometry={nodes.mesh_5.geometry} >
             <meshStandardMaterial
               attach="material"
-              color={new THREE.Color("#bbbbbb")}
-              roughness={0.7}
+              color={new THREE.Color("#333333")}
+              roughness={0.3}
               metalness={1.0}
             />
           </mesh>
           <mesh castShadow material={materials.material_0} geometry={nodes.mesh_6.geometry} >
             <meshStandardMaterial
               attach="material"
-              color={new THREE.Color("#bbbbbb")}
-              roughness={0.7}
+              color={new THREE.Color("#333333")}
+              roughness={0.3}
               metalness={1.0}
             />
           </mesh>
           <mesh castShadow material={materials.material_0} geometry={nodes.mesh_7.geometry} >
             <meshStandardMaterial
               attach="material"
-              color={new THREE.Color("#bbbbbb")}
-              roughness={0.7}
+              color={new THREE.Color("#333333")}
+              roughness={0.3}
               metalness={1.0}
             />
           </mesh>
           <mesh castShadow material={materials.material_0} geometry={nodes.mesh_8.geometry} >
             <meshStandardMaterial
               attach="material"
-              color={new THREE.Color("#bbbbbb")}
-              roughness={0.7}
+              color={new THREE.Color("#333333")}
+              roughness={0.3}
               metalness={1.0}
             />
           </mesh>
           <mesh castShadow material={materials.material_0} geometry={nodes.mesh_9.geometry} >
             <meshStandardMaterial
               attach="material"
-              color={new THREE.Color("#bbbbbb")}
-              roughness={0.7}
+              color={new THREE.Color("#333333")}
+              roughness={0.3}
               metalness={1.0}
             />
           </mesh>
           <mesh castShadow material={materials.material_0} geometry={nodes.mesh_10.geometry} >
             <meshStandardMaterial
               attach="material"
-              color={new THREE.Color("#bbbbbb")}
-              roughness={0.7}
+              color={new THREE.Color("#333333")}
+              roughness={0.3}
               metalness={1.0}
             />
           </mesh>
@@ -307,7 +307,7 @@ function Phone(props) {
               MacClicked = false;
               StatueClicked = false;
 
-              window.appHistory.push("/contact")
+              window.appHistory.push("/project")
               // window.location.href = 'https://www.github.com/donghakang'; 
             }}
             onPointerOver={(event) => setHover(true)}
@@ -469,7 +469,13 @@ function Objects(props) {
 }
 
 
-
+function Title(props) {
+  return (
+    <div className="home">
+      <span>{props.title}</span>
+    </div>
+  )
+}
 
 function Home() {
   return (
@@ -478,6 +484,7 @@ function Home() {
         shadowMap
         colorManagement
         camera={{ position: [10, 20, 40], fov: 70 }}
+        style={{width:"100vw", height: "100vh"}}
       >
 
         <Light />
@@ -488,9 +495,7 @@ function Home() {
 
       </Canvas>
       {/* <Footer /> */}
-      <div className="home">
-          <span>HELLO</span>
-      </div>
+      <Title title="DONGHAKANG"/>
     </div>
   );
 }
