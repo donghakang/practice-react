@@ -28,6 +28,13 @@ export default class Letter extends Component {
     this.setState({
         current: this.state.words[this.state.step % this.state.count]
     });
+
+    if (this.state.step == 10) {
+        clearInterval(this.interval)
+        this.setState({
+            step: 0
+        })
+    }
   }
 
   printStart = function() {
@@ -44,7 +51,8 @@ export default class Letter extends Component {
   printEnd = () => {
     clearInterval(this.interval)
     this.setState({
-        current: "C"
+        current: "C",
+        step: 0
     })
   }
 
