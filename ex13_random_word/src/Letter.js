@@ -6,7 +6,7 @@ export default class Letter extends Component {
   constructor(props) {
     super(props);
     this.state = { 
-        current: "S",
+        current: props.start,
         words: ['S', 'ㄱ', '!@', '^$', 'Z', 'K', 'ㄹ', 'k', '$$'],
         count: 9,
         step: 0
@@ -51,15 +51,14 @@ export default class Letter extends Component {
   printEnd = () => {
     clearInterval(this.interval)
     this.setState({
-        current: "C",
+        current: this.props.end,
         step: 0
     })
   }
 
   render() {
     return (
-      <div 
-        className="word"
+      <div className="word"
         onMouseEnter={
             () => this.printStart()
         }
