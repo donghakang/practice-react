@@ -20,10 +20,19 @@ class MemeGenerator extends Component {
         })
   }
 
+  handleChange(event) {
+    const {name, value} = event.target
+      this.setState({
+          [name] : value
+      })
+  }
+
   render() {
     return (
         <div>
             <form className="meme-form">
+                <input type="text" onChange={this.handleChange} placeholder="Enter Top Text here" name="topText" value={this.state.topText}/>
+                <input type="text" onChange={this.handleChange} placeholder="Enter Bottom Text here" name="bottomText" value={this.state.bottomText}/>
                 <button>Generate</button>
             </form>
         </div>
