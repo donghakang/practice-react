@@ -180,7 +180,7 @@ function App() {
     const lastName="Kang"
     
     return ( 
-        <h1> Hello {firstName + "  " + lastName} </h1>  // Hello {`${firstName} ${lasName}`} 
+        <h1> Hello {firstName + "  " + lastName} </h1>  // Hello {`${firstName} ${lastName}`} 
          
     )
 }

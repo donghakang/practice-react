@@ -37,12 +37,9 @@
 }
 
 .home {
-
-    display: flex;
-    left: 10vw;
-    flex-direction: column;
-    
+   
     .name {
+        margin-left: 4vw;
         width: 50vw;
         color: yellowgreen;
         font-size: 14vw;
@@ -51,7 +48,7 @@
     .description {
         position: relative;
         top: 6vh;
-        left: 2vw;
+        left: 4vw;
         width: 50vw;
         color: yellowgreen;
         font-size: 1.2vw;
@@ -75,6 +72,17 @@
     text-align: center;
     top: 50%;
     left: 50%;
+    transform: translate(-50%, -50%);
+    color: greenyellow;
+}
+
+// -------------------------- About  Page --------------------------
+
+.about {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 32vw;
     transform: translate(-50%, -50%);
     color: greenyellow;
 }
