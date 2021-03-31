@@ -1,5 +1,46 @@
-import React, { Component } from "react";
+import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
+
+/*
+function Letter(props) {
+  const words = ["S", "ㄱ", "!@", "^$", "Z", "K", "ㄹ", "k", "$$"];
+
+  const [word, setWord] = useState(props.start);
+  const [intervalId, setIntervalId] = useState("");
+  const [step, setStep] = useState(0);
+
+  const tick = () => {
+    setStep((stepSize) => stepSize + 1);
+    setWord(() => words[Math.floor(Math.random() * words.length)]);
+    console.log(step)
+    if (step > 30) {
+      clearInterval(intervalId);
+      setStep(() => 0)
+    }
+  };
+
+  const mouseOver = () => {
+    const id = setInterval(() => {
+      tick();
+    }, 50);
+    setIntervalId(() => id);
+  };
+
+  const mouseOut = () => {
+    clearInterval(intervalId);
+  };
+
+  return (
+    <div className="word" onMouseEnter={mouseOver} onMouseOut={mouseOut}>
+      {word}
+    </div>
+  );
+}
+
+export default Letter;
+
+*/
+
 
 export default class Letter extends Component {
     
@@ -71,3 +112,4 @@ export default class Letter extends Component {
     );
   }
 }
+
