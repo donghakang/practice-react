@@ -1,25 +1,30 @@
-import React, { useRef, useEffect } from 'react';
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
 
-import './App.css';
+import "./App.scss";
 
+import Home from "./components/Home";
+import About from "./components/About";
+import Project from "./components/Project";
+import Contact from "./components/Contact"
 function App() {
-  const canvasRef = useRef(null)
-  const contextRef = useRef(null)
-
-  useEffect(() => {
-    const canvas = canvasRef.current
-    canvas.width = window.innerWidth * 2
-    canvas.height = window.innerHeight * 2
-    canvas.style.width = `${window.innerWidth}px`
-    canvas.style.height = `${window.innerHeight}px`
-
-    const context = canvas.getContext('2d')
-    context.scale(2,2)
-    contextRef.current = context
-  }, [])
-
   return (
-    <canvas ref={canvasRef}/>
+    <div>
+      <Router>
+        <div className="App">
+          <Switch>
+            <Route path="/" exact component={Home} />
+            <Route path="/about" component={About} />
+            <Route path="/project" component={Project} />
+          </Switch>
+        </div>
+      </Router>
+      <Contact/>
+    </div>
   );
 }
 
