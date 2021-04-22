@@ -8,7 +8,7 @@ export default function ProjectElement(props)  {
      * @props date: project date.
      */
     return (
-        <div>
+        <div className="project element">
             <h1>{props.name}</h1>
             <p>{props.description}</p>
             <span>{props.language}</span>
