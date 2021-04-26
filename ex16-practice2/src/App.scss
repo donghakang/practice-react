@@ -112,22 +112,33 @@ header {
       background-color: red;
     }
   } 
-  .timeline {
-    // display: flex;
-    background-color: darkblue;
-    display: flex;
-    .time {
-      background-color: yellow;
-      width: 200px;
-      align-items: center;
-      .line {
-        border-radius: 1px;
-        margin: auto;
-        width: 2px;
-        height: 100vh;
-        background-color: black;
-      }
-    }
+  // .timeline {
+  //   // display: flex;
+  //   background-color: darkblue;
+  //   display: flex;
+  //   .time {
+  //     background-color: yellow;
+  //     width: 200px;
+  //     align-items: center;
+  //     .line {
+  //       border-radius: 1px;
+  //       margin: auto;
+  //       width: 2px;
+  //       height: 100vh;
+  //       background-color: black;
+  //     }
+  //   }
+  //   .content {
+  //     background-color:pink;
+  //     flex-direction: column;
+  //   }
+  //   .education {
+  //     background-color: brown;
+  //   }
+  //   .work {
+  //     background-color: gray;
+  //   }
+  // }
     .content {
       background-color:pink;
       flex-direction: column;
@@ -138,5 +149,5 @@ header {
     .work {
       background-color: gray;
     }
-  }
+
 }
