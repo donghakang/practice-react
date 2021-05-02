@@ -4,7 +4,6 @@ import Header from "./Header";
 import Skill from "./ui/About/Skill";
 import Work from "./ui/About/Work";
 import Resume from "./ui/About/Resume";
-import Education from "./ui/About/Education";
 
 const Info = () => {
   return (
@@ -16,6 +15,7 @@ const Info = () => {
 };
 
 export default function About() {
+  const lineStyle =  {borderBottom: '2px double #000'}
   return (
     <>
       <Header />
@@ -31,12 +31,8 @@ export default function About() {
           
         </div> */}
         <div className="content">
-            <div className="content education">
-              <h1>Education</h1>
-              <Education />
-            </div>
             <div className="content work">
-              <h1>Previous Work</h1>
+              <h1 style={lineStyle}>Previous Work</h1>
               <Work />
             </div>
           </div>
