@@ -29,28 +29,28 @@ const Light = () => {
 };
 
 export default function Model(props) {
-  const backgroundColor = props.backgroundColor
-  console.log(backgroundColor)
+  const backgroundColor = props.backgroundColor;
+  const style = {
+    width: "100vw",
+    height: "100vh",
+    position: "absolute",
+    top: "0%",
+    left: "0%",
+    zIndex: "0",
+  };
+
   return (
     <Canvas
       shadowMap
       colorManagement
-      camera={{ position: [0, 0, 0.25], fov: 100 }}
-      style={{
-        backgroundColor: {backgroundColor},
-        width: "100vw",
-        height: "100vh",
-        position: "absolute",
-        top: "0%",
-        left: "0%",
-        zIndex: "-1",
-      }}
+      camera={{ position: [0, 0, 0.5], fov: 100 }}
+      style={style}
     >
       <Light />
       <Suspense fallback={null}>
         <Scene />
       </Suspense>
-      <OrbitControls />
+      {/* <OrbitControls /> */}
     </Canvas>
   );
 }
