@@ -9,3 +9,52 @@
     height: 100vh;
     background-color: #ff3d00;
 }
+
+.about{
+    .title {
+        background-color: "#ff3d00";
+        font-size: "6rem";
+        color: "white";
+        z-index: "-1";
+    }
+}
+
+
+.box {
+    width: 500px; 
+    height: 100px;  
+    border: solid 5px #000;
+    border-color: #000 transparent transparent transparent;
+    border-radius: 50%/100px 100px 0 0;
+  }
+
+nav {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    height: 20vh;
+    z-index: 1;
+    font-weight: bold;
+    ol {
+        .link {
+            text-decoration: none;
+            list-style-type: none;
+            color: white;
+            .content {
+                margin-bottom: 4vh;
+                text-transform: uppercase;
+                
+            }
+        }
+        .link:hover{
+            color: lightblue;
+        }
+    }
+}
+
+
+
+// .about {
+//     margin:auto
+
+// }

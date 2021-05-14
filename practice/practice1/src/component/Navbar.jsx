@@ -4,17 +4,25 @@ import { Link } from "react-router-dom";
 import "../App.scss";
 
 export default function Navbar() {
-  const linkStyle = { position:"absolute", top:"90%", right:"0%", backgroundColor: "green", textDecoration: "none", color: "black", zIndex: "1",};
+  const linkStyle = {
+    textDecoration: "none",
+    listStyleType: "none",
+    color: "white",
+  };
+
   return (
-    <header  style={linkStyle}>
-      <ol className="header">
-        <Link to="/about">
-          <li>About</li>
+    <nav>
+      <ol>
+        <Link to="/about" className="link">
+          <li className="content">About</li>
         </Link>
-        <Link to="/project">
-          <li>Project</li>
+        <Link to="/project" className="link">
+          <li className="content">Project</li>
+        </Link>
+        <Link to="/contact" className="link">
+          <li className="content">Contact</li>
         </Link>
       </ol>
-    </header>
+    </nav>
   );
 }
