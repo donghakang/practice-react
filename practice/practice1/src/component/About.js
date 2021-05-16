@@ -1,8 +1,10 @@
 import React from "react";
 import Skill from "./ui/About/Skill";
-import Bezier from './ui/About/Bezier'
+// import Bezier from './ui/About/Bezier'
+import Emoji from 'react-apple-emojis'
+import {Work, Education} from './ui/About/Info'
 
-import "../App.scss";
+import './ui/About/About.scss'
 
 const skillStyle = {
   margin: "auto",
@@ -32,22 +34,19 @@ const Name = () => {
   return <h1 style={style}>{name}</h1>;
 };
 
-const Resume = () => {
-  return <div style={resumeStyle}>Resume</div>;
-};
-
-const PreviousWork = () => {
-  return <div style={workStyle}>previous work</div>;
-};
+// const Resume = () => {
+//   return <div style={resumeStyle}>Resume</div>;
+// };
 
 export default function About() {
   return (
     <div className="about">
-        <Bezier/>
+        {/* <Bezier/> */}
       <Name />
+      <Education/>
+      <Work/>
       <Skill style={skillStyle} />
-      <Resume />
-      <PreviousWork />
+      {/* <Resume /> */}
     </div>
   );
 }

@@ -21,18 +21,47 @@ const Bezier = () => {
     </svg>
   );
 
+  const startPoint = [25, 25];
+  const controlPoint = [300, 175];
+  const endPoint = [25, 325];
+  const path = (
+    <path
+      d={`
+      M ${startPoint}
+      Q ${controlPoint} ${endPoint}
+    `}
+      fill="none"
+      stroke="hotpink"
+      strokeWidth={5}
+    />
+  );
+
+  const path2 = (
+    <path
+      d={`
+        M 25,25
+        C 100,50 25,75 25,100
+        C 25,125 300,150 25,175
+      `}
+      fill="none"
+      stroke="orange"
+      strokeWidth={5}
+    />
+  );
   return (
     <svg
       style={{
         background: "#333",
         width: 240,
       }}
-      viewBox="0 0 80 80"
+      viewBox="0 0 400 400"
     >
       {rectangle}
       {circle}
       {triangle}
       {shape}
+      {path}
+      {path2}
     </svg>
   );
 };

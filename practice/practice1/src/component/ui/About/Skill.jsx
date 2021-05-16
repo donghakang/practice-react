@@ -14,8 +14,8 @@ const CameraController = () => {
     const controls = new OrbitControls(camera, gl.domElement);
     controls.enableDamping = true;
     controls.dampingFactor = 0.25;
-    // controls.enableZoom = false;
-    console.log(controls.position);
+  
+    // console.log(controls.position);
     // controls.minDistance = 3;
     // controls.maxDistance = 20;
     return () => {

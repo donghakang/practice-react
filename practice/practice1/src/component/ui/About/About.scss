@@ -1,0 +1,29 @@
+
+.education {
+    
+    // background-color: yellow;
+    width: 80vw;
+    margin: auto;
+    align-items: center;
+    .title{
+        display: flex;
+
+        .emoji {
+            display: flex;
+            width: 80px;
+            height: 80px;
+            // background-color: cyan;
+            .icon{
+                // background-color: green;
+                margin: auto;
+            }
+        }  
+        
+        h1 {
+            margin: 2vw 1vh;
+        }
+    }
+    .list {
+    }
+    
+}
