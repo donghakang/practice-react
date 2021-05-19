@@ -1,33 +1,26 @@
 import React from "react";
 import Skill from "./ui/About/Skill";
 // import Bezier from './ui/About/Bezier'
-import Emoji from 'react-apple-emojis'
-import {Work, Education} from './ui/About/Info'
+import Emoji from "react-apple-emojis";
+import { Work, Education, Language } from "./ui/About/Info";
 
-import './ui/About/About.scss'
+import "./ui/About/About.scss";
 
 const skillStyle = {
   margin: "auto",
+  marginTop: "-10vh",
   width: "60vw",
-  height: "60vh",
-  backgroundColor: "green",
-};
+  height: "40vh",
 
-const resumeStyle = {
-  backgroundColor: "green",
-};
-
-const workStyle = {
-  backgroundColor: "green",
 };
 
 const Name = () => {
   // const style =
   const name = "ABOUT ME,";
   const style = {
-    backgroundColor: "#ff3d00",
+    backgroundColor: "white",
     fontSize: "6rem",
-    color: "white",
+    color: "darkblue",
     zIndex: "-1",
   };
 
@@ -41,12 +34,12 @@ const Name = () => {
 export default function About() {
   return (
     <div className="about">
-        {/* <Bezier/> */}
+      {/* <Bezier/> */}
       <Name />
-      <Education/>
-      <Work/>
+      <Education />
+      <Work />
+      <Language />
       <Skill style={skillStyle} />
-      {/* <Resume /> */}
     </div>
   );
 }

@@ -62,7 +62,7 @@ const Skill = (props) => {
   return (
     <div>
       <Canvas
-        camera={{ position: [0, 0, -20], fov: 100 }}
+        camera={{ position: [0, 0, -10], fov: 100 }}
         style={props.style}
       >
         <CameraController />

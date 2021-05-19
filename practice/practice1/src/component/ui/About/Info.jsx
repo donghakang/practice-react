@@ -21,3 +21,13 @@ export const Education = () => {
     />
   );
 };
+
+export const Language = () => {
+  return (
+    <Info
+      title="Skill"
+      emoji="man-technologist-light-skin-tone"
+      data=""
+    />
+  );
+};
