@@ -1,0 +1,21 @@
+* {
+    background-color: white;
+}
+
+.project {
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    .contents {
+        display: flex;
+        width: 80vw;
+        margin: 10vh auto;
+        background-color: darkblue;
+        .component {
+            position:relative;
+            background-color: yellow;
+            width: 33%;
+        }
+    }
+}   

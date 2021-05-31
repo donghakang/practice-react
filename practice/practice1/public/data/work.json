@@ -1,6 +1,14 @@
 [
   {
     "id": "id_0",
+    "title": "Researcher, Developer at SNUH",
+    "date": "February 2021 - Current",
+    "info": [
+
+    ]
+  },
+  {
+    "id": "id_1",
     "title": "Teaching Assistant at University of Minnesota",
     "date": "September 2019 - January 2020",
     "info": [
@@ -9,7 +17,7 @@
     ]
   },
   {
-    "id": "id_1",
+    "id": "id_2",
     "title": "Squad Commander at Korean Army Training Center",
     "date": "August 2014 - May 2020",
     "info": [
