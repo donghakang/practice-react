@@ -4,14 +4,9 @@ import "./About.scss";
 
 const useInfo = (data) => {
   const [info, setInfo] = useState([]);
-  const contentStyle = {marginTop: '2vh', marginBottom: '2vh'}
+  const contentStyle = {marginTop: '2.5vh', marginBottom: '2.5vh'}
   const getData = () => {
-    fetch(data, {
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-    })
+    fetch(data)
       .then((res) => {
         return res.json();
       })
@@ -49,7 +44,7 @@ const Emoji = (props) => {
   const emojiStyle = {
     fontSize: "2.4rem",
     margin: "1vh 1vw",
-    backgroundColor: "cyan",
+    // backgroundColor: "cyan",
   };
 
   return (
@@ -75,7 +70,7 @@ const InfoComponent = (props) => {
         direction="row"
         justify="flex-start"
         alignItems="center"
-        style={{ backgroundColor: "yellow" }}
+        // style={{ backgroundColor: "yellow" }}
       >
         <Emoji symbol={props.emoji} />
         <h1>{props.title}</h1>

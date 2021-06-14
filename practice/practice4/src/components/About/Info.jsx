@@ -17,7 +17,7 @@ export const Language = () => {
     margin: "2vh auto 8vh auto",
     width: "60vw",
     height: "60vh",
-    backgroundColor: 'pink',
+    // backgroundColor: 'pink',
   };
   return (
     <div>

@@ -5,6 +5,7 @@ import Emoji from "react-apple-emojis";
 import { Work, Education, Language } from "./Info";
 import Skill  from './Skill'
 import { Container } from "@material-ui/core";
+import Navbar from '../Navbar'
 
 const Name = () => {
   // const style =
@@ -26,7 +27,12 @@ const Name = () => {
 export default function About() {
   return (
     <div className="about">
-      <Container maxWidth='md' style={{backgroundColor: 'red'}}>
+      <Container 
+        maxWidth='md' 
+        // style={{backgroundColor: 'red'}}
+      >
+        <Navbar/>
+        <Name/>
         <Education />
         <Work />
         <Language />
