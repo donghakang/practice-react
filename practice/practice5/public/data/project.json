@@ -1,0 +1,78 @@
+[
+  {
+    "id": "project_1",
+    "title": "Squad Commander at Korean Army Training Center",
+    "date": "August 2014 - May 2020",
+    "info": [
+      "Directed new Korean soldiers, who joined the army for the first time to adjust in Korean army",
+      "Awarded with 'the most motivational squad commander chosen by trainers', from Korean Army Training Center Major General"
+    ],
+    "importance": "3",
+    "img": "merona.png"
+  },
+  {
+    "id": "project_2",
+    "title": "Squad Commander at Korean Army Training Center",
+    "date": "August 2014 - May 2020",
+    "info": [
+      "Directed new Korean soldiers, who joined the army for the first time to adjust in Korean army",
+      "Awarded with 'the most motivational squad commander chosen by trainers', from Korean Army Training Center Major General"
+    ],
+    "importance": "2",
+    "img": "merona.png"
+  },
+  {
+    "id": "project_3",
+    "title": "Squad Commander at Korean Army Training Center",
+    "date": "August 2014 - May 2020",
+    "info": [
+      "Directed new Korean soldiers, who joined the army for the first time to adjust in Korean army",
+      "Awarded with 'the most motivational squad commander chosen by trainers', from Korean Army Training Center Major General"
+    ],"importance": "2",
+    "img": "merona.png"
+  },
+  {
+    "id": "project_4",
+    "title": "Squad Commander at Korean Army Training Center",
+    "date": "August 2014 - May 2020",
+    "info": [
+      "Directed new Korean soldiers, who joined the army for the first time to adjust in Korean army",
+      "Awarded with 'the most motivational squad commander chosen by trainers', from Korean Army Training Center Major General"
+    ],
+    "importance": "3",
+    "img": "merona.png"
+  },
+  {
+    "id": "project_5",
+    "title": "Squad Commander at Korean Army Training Center",
+    "date": "August 2014 - May 2020",
+    "info": [
+      "Directed new Korean soldiers, who joined the army for the first time to adjust in Korean army",
+      "Awarded with 'the most motivational squad commander chosen by trainers', from Korean Army Training Center Major General"
+    ],
+    "importance": "1",
+    "img": "merona.png"
+  },
+  {
+    "id": "project_6",
+    "title": "Squad Commander at Korean Army Training Center",
+    "date": "August 2014 - May 2020",
+    "info": [
+      "Directed new Korean soldiers, who joined the army for the first time to adjust in Korean army",
+      "Awarded with 'the most motivational squad commander chosen by trainers', from Korean Army Training Center Major General"
+    ]
+    ,"importance": "2",
+    "img": "merona.png"
+  },
+  {
+    "id": "project_7",
+    "title": "Squad Commander at Korean Army Training Center",
+    "date": "August 2014 - May 2020",
+    "info": [
+      "Directed new Korean soldiers, who joined the army for the first time to adjust in Korean army",
+      "Awarded with 'the most motivational squad commander chosen by trainers', from Korean Army Training Center Major General"
+    ],
+    "importance": "1",
+    "img": "merona.png"
+  }
+]

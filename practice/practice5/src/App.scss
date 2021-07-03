@@ -1,0 +1,33 @@
+@import "~bootstrap/scss/bootstrap";
+
+// Nav bar ------------------------------------
+.nav-bar {
+  // background-color: darkblue;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 1vw;
+  .nav-link {
+    color: black;
+  }
+  .nav-link:hover {
+    color: gray;
+  }
+
+  .brand {
+    // background-color: blue;
+    margin: 0;
+    font-size: xx-large;
+  }
+
+  ul {
+    // background-color: darkcyan;
+
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    .menu {
+      margin: auto 1vw;
+    }
+  }
+}
