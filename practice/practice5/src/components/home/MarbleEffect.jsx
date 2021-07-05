@@ -13,6 +13,7 @@ const shaders = Shaders.create({
     uniform vec2 u_center;
     uniform float u_time;
     uniform float u_radius;
+    uniform vec3 u_baseColor;
     
     float variation(vec2 v1, vec2 v2, float strength, float speed) {
       return sin(
@@ -29,35 +30,41 @@ const shaders = Shaders.create({
         len -= variation(diff, vec2(1.0, 0.0), 2.0, 2.0);
         
         float circle = smoothstep(rad, rad+width, len);
+        // return vec3(circle);
         return vec3(circle);
+
     }
+
+    vec4 paintPerfectCircle (vec2 uv, vec2 center, float rad, vec3 color) {
+        float d = length(center - uv) - rad;
+        float t = clamp(d , 0., 1.);
+        return vec4(color, 1.0 - t);
+    }
+
 
     void main () {
       vec2 p = (2.0 * gl_FragCoord.xy - u_resolution) / max(u_resolution.x, u_resolution.y);
-
       for (int i = 1; i < 20; i ++) {
         vec2 newp = p + u_time * 0.001;
         newp.x += 0.9 / float(i) * sin(float(i) * p.y + u_time / 50.0 + 0.3 * float(i)) + 0.5;
         newp.y += 0.6 / float(i) * sin(float(i) * p.x + u_time / 25.0 + 0.3 * float(i+10)) - 0.5;
         p = newp;
       }
-
       vec3 col = vec3(0.4, 0.075 * sin(3.0 * p.y) + 0.5, 0.9);
-
       // circle
       // float d = 2. * distance(uv, vec2(0.5));
       // vec4 color = mix(vec4(col, 1.0), vec4(0.), step(1., d));
-
       
       vec4 color = vec4(col, 1.);
     
       // distorted circle
-      // float radius = 0.6;
+      if (paintCircle(uv, u_center, u_radius, 0.0001) == vec3(1.)) {
+          color = vec4(u_baseColor, 1.);
 
-      color += vec4(paintCircle(uv, u_center, u_radius, .01), 1.);
-
+      } else {
+          color += vec4(paintCircle(uv, u_center, u_radius, .01), 1.);
+      }
       gl_FragColor = color;
-      // gl_FragColor = vec4(paintCircle(uv, center, u_radius, .01), 1.);
     }
 
     `,
@@ -111,6 +118,7 @@ const MarbleEffect = (props) => {
               u_time: time,
               u_center: [0.3, 0.3],
               u_radius: 0.6,
+              u_baseColor: [1, 1, 1],
             }}
           />
         </Surface>
@@ -123,6 +131,7 @@ const MarbleEffect = (props) => {
               u_time: time,
               u_center: [0.5, 0.5],
               u_radius: 0.4,
+              u_baseColor: [1, 1, 1],
             }}
           />
         </Surface>

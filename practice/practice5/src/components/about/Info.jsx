@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import VisualInfo from "./VisualInfo";
 
 const Info = (props) => {
   const [isLoading, setIsLoading] = useState(true);
@@ -49,5 +50,5 @@ export function Work() {
 }
 
 export function Skill() {
-  return <Info name="Skill" emoji="👨🏻‍💻" data="/data/skill.json" />;
+  return <VisualInfo name="Skill" emoji="👨🏻‍💻" data="/data/skill.json" />;
 }

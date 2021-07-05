@@ -1,5 +1,5 @@
 import React from "react";
-import Skill from "./ui/About/Skill";
+import Skill from "./ui/AboutSkill";
 // import Bezier from './ui/About/Bezier'
 import Emoji from "react-apple-emojis";
 import { Work, Education, Language } from "./ui/About/Info";
@@ -9,6 +9,7 @@ import "./ui/About/About.scss";
 const skillStyle = {
   margin: "auto",
   marginTop: "-10vh",
+  marginBottom: '40vh',
   width: "60vw",
   height: "40vh",
 

@@ -3,8 +3,15 @@ import { Canvas, useThree, useFrame } from "@react-three/fiber";
 import { Html } from "@react-three/drei";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
-const lang = ["python", "javascript", "java", "android", "swift", "React", "Node.js"];
-
+const lang = [
+  "python",
+  "javascript",
+  "java",
+  "android",
+  "swift",
+  "React",
+  "Node.js",
+];
 
 // Camera Controller
 const CameraController = () => {
@@ -13,17 +20,13 @@ const CameraController = () => {
     const controls = new OrbitControls(camera, gl.domElement);
     controls.enableDamping = true;
     controls.dampingFactor = 0.25;
-  
-    // console.log(controls.position);
-    // controls.minDistance = 3;
-    // controls.maxDistance = 20;
+
     return () => {
       controls.dispose();
     };
   }, [camera, gl]);
   return null;
 };
-
 
 // Languages that are shown
 const Languages = () => {
@@ -32,14 +35,14 @@ const Languages = () => {
 
   const handleClick = (lang) => {
     // when language is clicked, pops out the information about the language
-    // console.log('clicked ', lang)    
-    console.log(lang)
-  }
+    // console.log('clicked ', lang)
+    console.log(lang);
+  };
 
   const textLanguages = lang.map((l) => (
     <mesh
       position={[
-        Math.floor(Math.random() * 20 - 10),
+        Math.floor(Math.random() * 40 - 20),
         Math.floor(Math.random() * 20 - 10),
         Math.floor(Math.random() * 20 - 10),
       ]}
@@ -62,8 +65,13 @@ const Skill = (props) => {
   return (
     <div>
       <Canvas
-        camera={{ position: [0, 0, -10], fov: 100 }}
-        style={props.style}
+        camera={{ position: [0, 0, -20], fov: 90 }}
+        style={{
+          backgroundColor: "red",
+          margin: "auto",
+          width: "60vw",
+          height: "40vh",
+        }}
       >
         <CameraController />
         <ambientLight />

@@ -59,9 +59,8 @@ const SocialNetworkComponent = () => {
 
 const ContactMeComponent = () => {
   return (
-    <Grid container>
-      <div>
-    {/* //     style={{
+    <div>
+      {/* //     style={{
     //       display: "flex",
     //       flexDirection: "vertical",
     //       backgroundColor: "pink",
@@ -74,20 +73,22 @@ const ContactMeComponent = () => {
     //     <TextField variant="outlined" label="Email" margin="dense" />
     //     <TextField variant="outlined" label="Tel." margin="dense" />
     //     <TextField variant="outlined" label="Message" margin="dense" /> */}
-    <TextField variant="outlined" label="Name" margin="dense" />
-      </div>
-    </Grid>
+      <TextField variant="outlined" label="Name" margin="dense" />
+      <TextField variant="outlined" label="Email" margin="dense" />
+      <TextField variant="outlined" label="Tel" margin="dense" />
+      <TextField variant="outlined" label="Memo" margin="dense" />
+
+    </div>
   );
 };
 export default function Contact() {
   const classes = useStyles();
   return (
-    <Container sm className={classes.root}>
+    <Container maxWidth='md' className={classes.root}>
       <Navbar />
       <Typography className={classes.heading}>Contact</Typography>
 
       <SocialNetworkComponent />
-      <ContactMeComponent />
     </Container>
   );
 }
