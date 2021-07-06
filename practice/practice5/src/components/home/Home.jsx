@@ -5,19 +5,16 @@ import Model from "./Environment";
 import Introduction from "./Introduction";
 export default function App() {
   return (
-    <div
-      style={{
-        overflowY: "hidden",
-        width: "100vw",
-        height: "100vh",
-      }}
-    >
+    <div className="home">
       <Header />
-      <MarbleEffect />
+      <div className="visual-effect">
+        <MarbleEffect />
+        <Model backgroundColor={"#ff0000"} />
+      </div>
+
       <Introduction />
-      <FooterComponent />
+      {/* <FooterComponent /> */}
       {/* <Footer /> */}
-      <Model backgroundColor={"#ff0000"} />
     </div>
   );
 }

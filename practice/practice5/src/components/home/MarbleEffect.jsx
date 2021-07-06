@@ -52,11 +52,11 @@ const shaders = Shaders.create({
       }
       vec3 col = vec3(0.4, 0.075 * sin(3.0 * p.y) + 0.5, 0.9);
       // circle
-      // float d = 2. * distance(uv, vec2(0.5));
-      // vec4 color = mix(vec4(col, 1.0), vec4(0.), step(1., d));
+    //   float d = 2. * distance(uv, vec2(0.5));
+    //   vec4 color = mix(vec4(col, 1.0), vec4(0.), step(1., d));
       
       vec4 color = vec4(col, 1.);
-    
+      
       // distorted circle
       if (paintCircle(uv, u_center, u_radius, 0.0001) == vec3(1.)) {
           color = vec4(u_baseColor, 1.);
@@ -108,7 +108,7 @@ const MarbleEffect = (props) => {
   }, []);
 
   return (
-    <div style={{ marginLeft: "0px" }}>
+    <div>
       {dim.width > dim.height ? (
         <Surface width={dim.height} height={dim.height}>
           <Node
@@ -116,7 +116,7 @@ const MarbleEffect = (props) => {
             uniforms={{
               u_resolution: [300, 300],
               u_time: time,
-              u_center: [0.3, 0.3],
+              u_center: [0.36, 0.4],
               u_radius: 0.6,
               u_baseColor: [1, 1, 1],
             }}

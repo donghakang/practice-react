@@ -8,9 +8,9 @@ const Light = () => {
   return (
     <group>
       <ambientLight intensity={0.5} />
-      <pointLight position={[-5, 2, -10]} intensity={0.5} color="red" />
-      <pointLight position={[10, 3, -5]} intensity={1.5} color="blue" />
-      <pointLight position={[30, -10, -30]} intensity={1.5} color="green" />
+      <pointLight position={[-5, 2, -10]} intensity={0.5} color="blue" />
+      <pointLight position={[10, 3, -5]} intensity={1.5} color="purple" />
+      <pointLight position={[30, -10, -30]} intensity={1.5} color="pink" />
       <directionalLight
         castShadow
         position={[0, 40, 40]}
@@ -31,19 +31,28 @@ const Light = () => {
 export default function Model(props) {
   const backgroundColor = props.backgroundColor;
   const style = {
-    width: "800px",
-    height: "100vh",
+    width: "50vw",
+    height: "90vh",
+    display: "flex",
     position: "absolute",
-    top: "0%",
+    top: "60px",
     left: "0%",
     zIndex: "0",
   };
 
+  // const style = {
+  //   width: "100vw",
+  //   height: "100vh",
+  //   position: "absolute",
+  //   top: "0%",
+  //   left: "0%",
+  //   zIndex: "0",
+  // };
   return (
     <Canvas
       shadowMap
       colorManagement
-      camera={{ position: [0, 0, 0.4], fov: 100 }}
+      camera={{ position: [0, 0, 0.5], fov: 90 }}
       style={style}
     >
       <Light />

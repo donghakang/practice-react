@@ -3,6 +3,8 @@ import React, { useState, useEffect } from "react";
 import Header from "../Header";
 import { Education, Work, Skill } from "./Info";
 
+import "../../App.scss";
+
 const useFetch = (dir) => {
   const [isLoading, setIsLoading] = useState(true);
   const [info, setInfo] = useState([]);
@@ -34,13 +36,14 @@ export default function About() {
       {isLoading ? (
         <div> is loading ... </div>
       ) : (
-        <div>
+        <>
           <Header />
-
-          <Education />
-          <Work />
-          <Skill />
-        </div>
+          <div className="about">
+            <Education />
+            <Work />
+            <Skill />
+          </div>
+        </>
       )}
     </>
   );

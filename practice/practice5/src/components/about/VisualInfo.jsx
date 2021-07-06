@@ -2,6 +2,7 @@ import React, { useState, useEffect, Suspense, useRef } from "react";
 import { Canvas, useThree, useFrame } from "@react-three/fiber";
 import { Html } from "@react-three/drei";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
+import { Container, Row, Col } from "react-bootstrap";
 
 const lang = [
   "python",
@@ -64,10 +65,19 @@ const Languages = () => {
 const Skill = (props) => {
   return (
     <div>
+      <Container className="info">
+        <Row className="title-row">
+          <Col xs={1} className="title-col-emoji">
+            {props.emoji}
+          </Col>
+          <Col xs={19} className="title-col-name">
+            {props.name}
+          </Col>
+        </Row>
+      </Container>
       <Canvas
         camera={{ position: [0, 0, -20], fov: 90 }}
         style={{
-          backgroundColor: "red",
           margin: "auto",
           width: "60vw",
           height: "40vh",

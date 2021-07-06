@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Container, Row, Col } from "react-bootstrap";
 import VisualInfo from "./VisualInfo";
 
 const Info = (props) => {
@@ -18,10 +19,18 @@ const Info = (props) => {
   return (
     <>
       {!isLoading ? (
-        <div>
-          {props.emoji} {props.name}
+        <Container className="info">
+          <Row className="title-row">
+            <Col xs={1} className="title-col-emoji">
+              {props.emoji}
+            </Col>
+            <Col xs={19} className="title-col-name">
+              {props.name}
+            </Col>
+          </Row>
           <InfoComponent data={info} />
-        </div>
+          <hr />
+        </Container>
       ) : (
         <div> isLoading... </div>
       )}
@@ -31,12 +40,24 @@ const Info = (props) => {
 
 const InfoComponent = (props) => {
   const info = props.data.map((res) => (
-    <div key={res.id}>
-      {res.title} {res.date} {res.info}
+    <div className="task">
+      <Row key={res.id}>
+        <Col className="task-title">{res.title}</Col>
+        <Col className="task-date">{res.date}</Col>
+      </Row>
+      <Row>
+        <Col className="task-info">
+          <ul className="task-info-ul">
+            {res.info.map((item, index) => (
+              <li key={index} className="task-info-li">
+                {item}
+              </li>
+            ))}
+          </ul>
+        </Col>
+      </Row>
     </div>
   ));
-
-  console.log(info);
 
   return <>{info}</>;
 };

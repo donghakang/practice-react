@@ -13,9 +13,9 @@ const MetalicMatieral = () => {
   return (
     <meshStandardMaterial
       attach="material"
-      color={new THREE.Color("#1976d2")}
-      roughness={1.0}
-      metalness={0.5}
+      color={new THREE.Color("#aaaaaa")}
+      roughness={0.5}
+      metalness={1.0}
     />
   );
 };
