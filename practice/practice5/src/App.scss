@@ -61,11 +61,57 @@
   top: 50%;
   left: 50%;
   transform: translate(0, -50%);
-  h1 {
-    font-size: 6rem;
+
+  .introduction-title {
+    overflow: hidden;
+    h1 {
+      font-size: 6rem;
+    }
   }
-  h5 {
-    font-size: 0.875rem;
+
+  .intro-content {
+    display: flex;
+    font-size: 16px;
+    line-height: 40px;
+
+    .intro-wrapper {
+      display: flex;
+      height: 40px;
+      .animated-text {
+        height: 40px;
+        overflow: hidden;
+        .animated-text-desc {
+          height: 80px;
+          transform: translateY(40px);
+          // background-color: green;
+          animation: slide 10s ease-in-out infinite;
+        }
+
+        @keyframes slide {
+          0% {
+            transform: translateY(0px);
+          }
+          16% {
+            transform: translateY(-80px);
+          }
+          33% {
+            transform: translateY(-80px);
+          }
+          49% {
+            transform: translateY(-160px);
+          }
+          66% {
+            transform: translateY(-160px);
+          }
+          82% {
+            transform: translateY(-240px);
+          }
+          100% {
+            transform: translateY(-240px);
+          }
+        }
+      }
+    }
   }
 }
 
@@ -119,6 +165,7 @@
 .project-content {
   background: skyblue;
   height: 25vh;
+  transition: 0.7s;
 }
 .project-content:hover {
   background: blue;

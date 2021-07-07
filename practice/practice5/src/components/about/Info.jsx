@@ -28,6 +28,7 @@ const Info = (props) => {
               {props.name}
             </Col>
           </Row>
+          <br />
           <InfoComponent data={info} />
           <hr />
         </Container>
