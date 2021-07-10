@@ -1,14 +1,13 @@
 [
   {
     "id": "project_1",
-    "title": "Squad Commander at Korean Army Training Center",
-    "date": "August 2014 - May 2020",
+    "title": "Pulmorad",
+    "date": "February 2021 - Current",
     "info": [
       "Directed new Korean soldiers, who joined the army for the first time to adjust in Korean army",
       "Awarded with 'the most motivational squad commander chosen by trainers', from Korean Army Training Center Major General"
     ],
-    "importance": "3",
-    "img": "merona.png"
+    "img": "pulmorad.img"
   },
   {
     "id": "project_2",
@@ -28,7 +27,8 @@
     "info": [
       "Directed new Korean soldiers, who joined the army for the first time to adjust in Korean army",
       "Awarded with 'the most motivational squad commander chosen by trainers', from Korean Army Training Center Major General"
-    ],"importance": "2",
+    ],
+    "importance": "2",
     "img": "merona.png"
   },
   {
@@ -60,8 +60,8 @@
     "info": [
       "Directed new Korean soldiers, who joined the army for the first time to adjust in Korean army",
       "Awarded with 'the most motivational squad commander chosen by trainers', from Korean Army Training Center Major General"
-    ]
-    ,"importance": "2",
+    ],
+    "importance": "2",
     "img": "merona.png"
   },
   {

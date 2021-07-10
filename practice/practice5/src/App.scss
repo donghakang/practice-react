@@ -65,18 +65,23 @@
   .introduction-title {
     overflow: hidden;
     h1 {
-      font-size: 6rem;
+      font-size: 120px;
     }
   }
 
   .intro-content {
     display: flex;
-    font-size: 16px;
+    flex-direction: column;
+    font-size: 24px;
     line-height: 40px;
 
+    .intro-hide {
+      color: #333333;
+    }
     .intro-wrapper {
       display: flex;
       height: 40px;
+
       .animated-text {
         height: 40px;
         overflow: hidden;

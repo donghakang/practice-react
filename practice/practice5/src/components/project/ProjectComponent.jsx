@@ -1,5 +1,50 @@
-import React, { useState, useEffect, useContext } from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import React, { useState, useEffect } from "react";
+import { Container, Row, Col, Modal, Button } from "react-bootstrap";
+
+const ProjectContent = (props) => {
+  const { item } = props;
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+  return (
+    <>
+      <div
+        className="col-md-4 w-100 project-content"
+        onClick={handleShow}
+        onPointerOver={() => console.log("hello")}
+      >
+        {item.title}
+      </div>
+      <Modal
+        show={show}
+        onHide={handleClose}
+        size="xl"
+        aria-labelledby="contained-modal-title-vcenter"
+        centered
+      >
+        <Modal.Header closeButton>
+          <Modal.Title>title</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          Woohoo, you're reading this text in a modal!Woohoo, you're reading
+          this text in a modal!Woohoo, you're reading this text in a
+          modal!Woohoo, you're reading this text in a modal!Woohoo, you're
+          reading this text in a modal!Woohoo, you're reading this text in a
+          modal!Woohoo, you're reading this text in a modal!Woohoo, you're
+          reading this text in a modal!Woohoo, you're reading this text in a
+          modal!
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="primary" onClick={handleClose}>
+            Link
+          </Button>
+        </Modal.Footer>
+      </Modal>
+    </>
+  );
+};
 
 export default function ProjectComponent() {
   const [project, setProject] = useState([]);
@@ -17,19 +62,11 @@ export default function ProjectComponent() {
     fetchData();
   }, []);
 
-  console.log(project);
-
   return (
     <Container fluid>
       <Row>
         {project.map((item) => (
-          <Col md="4" key={item.id} className="project-content">
-            <div>
-              {item.title}
-              <br />
-              {item.date}
-            </div>
-          </Col>
+          <ProjectContent key={item.id} item={item} />
         ))}
       </Row>
     </Container>
