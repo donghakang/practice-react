@@ -8,15 +8,24 @@ const ProjectContent = (props) => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
+  const hoverTitle = () => {
+    console.log("hoverTitle function", item.img);
+  };
+
   return (
     <>
       <div
-        className="col-md-4 w-100 project-content"
+        className="col-md-4 padding-0 w-100 project-content"
         onClick={handleShow}
-        onPointerOver={() => console.log("hello")}
+        onPointerOver={hoverTitle}
       >
-        {item.title}
+        <div className="w-100 h-100 project-content-img" style={{ backgroundImage: `url('${item.img}')` }}>
+          <div className='w-100 h-100 project-content-overlay'>
+          </div>
+        </div>
+        <h1 className="project-content-title">{item.title}</h1>
       </div>
+
       <Modal
         show={show}
         onHide={handleClose}
@@ -25,7 +34,7 @@ const ProjectContent = (props) => {
         centered
       >
         <Modal.Header closeButton>
-          <Modal.Title>title</Modal.Title>
+          <Modal.Title>{item.title}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           Woohoo, you're reading this text in a modal!Woohoo, you're reading
@@ -63,12 +72,15 @@ export default function ProjectComponent() {
   }, []);
 
   return (
-    <Container fluid>
-      <Row>
+    <div className="container-fluid mx-0 px-0 project-container">
+      <div className="row no-gutters mx-0 px-0 project-row">
         {project.map((item) => (
           <ProjectContent key={item.id} item={item} />
         ))}
-      </Row>
-    </Container>
+        <div className="col-md-4 project-content" style={{ height: "33vh" }}>
+          <h1 className="project-content-last">More coming soon..</h1>
+        </div>
+      </div>
+    </div>
   );
 }
