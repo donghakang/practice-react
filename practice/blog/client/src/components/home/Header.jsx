@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+// import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 function Header() {
@@ -8,14 +8,17 @@ function Header() {
       <nav>
         <ul>
           <li>
-            <Link to="/react">React</Link>
+            <Link to="/blog">Blog</Link>
           </li>
           <li>
-            <Link to="/javascript">Javascript</Link>
+            <Link to="/about">About</Link>
           </li>
           <li>
-            <Link to="/programmers">Programmers</Link>
+            <Link to="/Work">work</Link>
           </li>
+          {/* <li>
+            <Link to="/daily">Diary</Link>
+          </li> */}
         </ul>
       </nav>
     </div>
